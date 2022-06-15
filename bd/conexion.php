@@ -3,11 +3,10 @@ $servername="localhost";
 $username="root";
 $password="";
 $bd="gestion_vacacaciones";
-$sql="";
 
 
 try{
-    $conn=new PDO("mysql:host=$servername; port= 3306; dbname=$bd;", $username, $password);
+    $conn = new PDO("mysql:host=$servername; port= 3306; dbname=$bd;", $username, $password);
 
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     // echo "<p style='color:gray'>Login correcto</p>";
