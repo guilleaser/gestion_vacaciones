@@ -7,8 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js"></script>
-    link
-    <title>Document</title>
+    <title>Home</title>
 </head>
 
 <body>
@@ -16,7 +15,7 @@
     <h2>Bienvenido al programador de vacaciones.</h2>
     <div class="container" id="container">
         <div class="form-container sign-in-container">
-            <form action="#">
+            <form action="usuario.php" id="formLogin">
                 <h1>Sign in</h1>
                 <span>Ingresa con el correo electrónico.</span>
                 <input type="email" placeholder="Email" />
@@ -30,7 +29,9 @@
                 <div class="overlay-panel overlay-right">
                     <h1>Hola,</h1>
                     <p>Registra tus datos para comenzar el viaje con nosotros</p>
-                    <button class="ghost" id="signUp">Sign Up</button>
+                    <form action="registro.php">
+                        <button type="submit" class="ghost" id="signUp">Sign Up</button>
+                    </form>
                 </div>
             </div>
         </div>

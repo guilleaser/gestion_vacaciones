@@ -71,7 +71,7 @@ button.ghost {
 	border-color: #FFFFFF;
 }
 
-form {
+#formLogin {
 	background-color: #FFFFFF;
 	display: flex;
 	align-items: center;
@@ -250,4 +250,14 @@ footer i {
 footer a {
     color: #3c97bf;
     text-decoration: none;
+}
+
+
+#formUser {
+	background-color: none;
+}
+
+#usuarioTexto {
+	position: absolute;
+	margin-left: -30%;
 }
