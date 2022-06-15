@@ -5,24 +5,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
+    <!-- <link rel="stylesheet" href="../css/style.css"> -->
     <link rel="stylesheet" href="../css/calendario.css">
     <?php require '../php/calendario_salida.php'; ?>
     <title>Calendario</title>
 </head>
 
 <body>
-    <div>
+    <div id="tableEmpleados">
         <h1>Vacaciones</h1>
-        <div>
+        <div >
             <form action="../php/calendario_salida.php" method="POST">
                 <select name="transporte">
-                    <?php echo aniosSeleccionables() ?>
+                    <?php aniosSeleccionables($conn) ?>
                 </select>
             </form>
         </div>
         <div>
-            <table>
+            <table id="tablaSalida">
                 <tr>
                     <th>Empleado</th>
                     <th>Motivo</th>
@@ -31,7 +31,7 @@
                     <th>Días totales</th>
                     <th>Acumulados</th>
                 </tr>
-                <?php echo tablaCalendario() ?>
+                <?php echo tablaCalendario($conn) ?>
             </table>
             <div>
                 <h3>Estadisticas mensuales</h3>
@@ -45,7 +45,7 @@
                         <th>Otros</th>
                     </tr>
                     <tr>
-                        <?php echo estadisticasCalendario() ?>
+                        <?php echo estadisticasCalendario($conn) ?>
                     </tr>
                 </table>
             </div>
