@@ -24,7 +24,7 @@
                 <div class="overlay-panel overlay-right">
                     <h1><?php if (isset($_SESSION['usuario']) ? $dato = $_SESSION['usuario'] : $dato = 'Empleado') echo $dato; ?></h1>
                     <p>Registra tus datos para comenzar el viaje con nosotros</p>
-                    <form action="php/crud.php" id="formUser">
+                    <form action="php/crud.php" id="formUser" method="POST">
                         <!-- Salida en base al paerfil del registro usuario_opciones.php -->
                         <?php require 'php/usuario_opciones.php'; ?>
                     </form>

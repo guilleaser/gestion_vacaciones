@@ -15,7 +15,7 @@
     <h2>Bienvenido al programador de vacaciones.</h2>
     <div class="container" id="container">
         <div class="form-container sign-in-container">
-            <form action="usuario.php" id="formLogin">
+            <form action="usuario.php" id="formLogin" method="POST">
                 <h1>Sign in</h1>
                 <span>Ingresa con el correo electrónico.</span>
                 <input type="email" placeholder="Email" />
@@ -29,7 +29,7 @@
                 <div class="overlay-panel overlay-right">
                     <h1>Hola,</h1>
                     <p>Registra tus datos para comenzar el viaje con nosotros</p>
-                    <form action="registro.php">
+                    <form action="registro.php" method="POST">
                         <button type="submit" class="ghost" id="signUp">Sign Up</button>
                     </form>
                 </div>
