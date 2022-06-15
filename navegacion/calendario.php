@@ -13,10 +13,10 @@
 
 <body>
     <div id="tableEmpleados">
-        <h1>Vacaciones</h1>
+        <h1>Calendario</h1>
         <div >
             <form action="../php/calendario_salida.php" method="POST">
-                <select name="transporte">
+                <select name="transporte" id="optionYear">
                     <?php aniosSeleccionables($conn) ?>
                 </select>
             </form>
@@ -33,20 +33,19 @@
                 </tr>
                 <?php echo tablaCalendario($conn) ?>
             </table>
-            <div>
+            <div id="estadisticas">
                 <h3>Estadisticas mensuales</h3>
                 <table>
                     <tr>
                         <th>Dias de Baja</th>
-                        <th>Días de trabajo</th>
                         <th>Días de vacaciones</th>
                         <th>Días de enfermedad</th>
                         <th>Medio día</th>
                         <th>Otros</th>
                     </tr>
-                    <tr>
-                        <?php echo estadisticasCalendario($conn) ?>
-                    </tr>
+
+                    <?php echo estadisticasCalendario($conn) ?>
+
                 </table>
             </div>
         </div>

@@ -35,12 +35,12 @@ function estadisticasCalendario($conn){
     $sql="SELECT DISTINCT YEAR(fecha_inicio) AS anio FROM vacaciones;";
     $result=$conn->query($sql);
     while ($anio = $result->fetch(PDO:: FETCH_ASSOC)){
-        echo'<td>Empleado</td>';
+        echo'<tr><td>Empleado</td>';
         echo'<td>Motivo</td>';
         echo'<td>Día inicio</td>';
         echo'<td>Día final</td>';
         echo'<td>Días totales</td>';
-        echo'<td>Acumulados</td>';
+        echo'<td>Acumulados</td></tr>';
     }
 
 
